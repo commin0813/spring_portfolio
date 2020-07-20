@@ -1,5 +1,7 @@
 package org.commin.blog.api.dto.network.response;
 
+import java.sql.Timestamp;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,4 +18,6 @@ public class ResponseIntro {
 	private String title;
 	private String content;
 	private String photoUri;
+	private Timestamp createDate;
+	private Timestamp updateDate;
 }
