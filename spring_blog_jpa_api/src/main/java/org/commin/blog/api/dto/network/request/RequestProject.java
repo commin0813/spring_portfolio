@@ -1,8 +1,7 @@
 package org.commin.blog.api.dto.network.request;
 
-import java.sql.Timestamp;
-
-import org.commin.blog.api.dto.enumclass.SkillType;
+import javax.persistence.Column;
+import javax.persistence.Lob;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,9 +14,11 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RequestSkill {
+public class RequestProject {
 	private Long id;
-	private String imageUri;
-	private String skillName;
-	private SkillType skillType;
+	private String startDateString;
+	private String endDateString;
+	private String projectName;
+	private String projectDesc;
+	private String projectImageUri;
 }

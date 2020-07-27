@@ -4,47 +4,47 @@ import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 
-import org.commin.blog.api.dto.enumclass.SkillType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.LastModifiedDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@Accessors(chain = true)
 @Entity
-public class Skill {
-
+public class Project {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(nullable = false, length = 8)
+	private String startDateString;
+	@Column(nullable = false, length = 8)
+	private String endDateString;
+	@Column(nullable = false, length = 20)
+	private String projectName;
+	@Column(nullable = false, length = 200)
+	private String projectDesc;
 
 	@Lob
-	private String imageUri;
-
-	@Column(nullable = false, length = 100)
-	private String skillName;
-
-	@Column(nullable = false)
-	@Enumerated(EnumType.STRING)
-	private SkillType skillType;
+	private String projectImageUri;
 
 	@CreationTimestamp
 	private Timestamp createDate;
 
 	@UpdateTimestamp
 	private Timestamp updateDate;
+
 }

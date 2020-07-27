@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import javax.transaction.Transactional;
 
 import org.commin.blog.api.dto.Skill;
+import org.commin.blog.api.dto.enumclass.SkillType;
 import org.commin.blog.api.dto.network.Header;
 import org.commin.blog.api.dto.network.request.RequestSkill;
 import org.commin.blog.api.dto.network.response.ResponseSkill;
@@ -23,7 +24,7 @@ public class SkillService extends BaseService<RequestSkill, ResponseSkill, Skill
 			Skill skill = Skill.builder()//
 					.imageUri(body.getImageUri())//
 					.skillName(body.getSkillName())//
-					.build();
+					.skillType(body.getSkillType() == null ? SkillType.LANGUAGE : body.getSkillType()).build();
 			return skill;
 		}).map(newSkill -> {
 			return baseRepository.save(newSkill);
@@ -48,6 +49,7 @@ public class SkillService extends BaseService<RequestSkill, ResponseSkill, Skill
 				.map(selectedSkill -> {
 					selectedSkill.setImageUri(requestSkill.getImageUri());
 					selectedSkill.setSkillName(requestSkill.getSkillName());
+					selectedSkill.setSkillType(requestSkill.getSkillType() == null ? SkillType.LANGUAGE : requestSkill.getSkillType());
 					return selectedSkill;
 				}).map(updatedSkill -> {
 					return response(updatedSkill);
@@ -68,12 +70,18 @@ public class SkillService extends BaseService<RequestSkill, ResponseSkill, Skill
 		return Header.OK(list);
 	}
 
+	public Header<List<ResponseSkill>> list(SkillType skillType) {
+		List<ResponseSkill> list = baseRepository.findAll().stream().filter(s -> s.getSkillType() == skillType).map(skill -> response_(skill)).collect(Collectors.toList());
+		return Header.OK(list);
+	}
+
 	public Header<ResponseSkill> response(Skill item) {
 
 		ResponseSkill body = ResponseSkill.builder()//
 				.id(item.getId())//
 				.imageUri(item.getImageUri())//
 				.skillName(item.getSkillName())//
+				.skillType(item.getSkillType())//
 				.createDate(item.getCreateDate())//
 				.updateDate(item.getUpdateDate()).build();
 
@@ -86,6 +94,7 @@ public class SkillService extends BaseService<RequestSkill, ResponseSkill, Skill
 				.id(item.getId())//
 				.imageUri(item.getImageUri())//
 				.skillName(item.getSkillName())//
+				.skillType(item.getSkillType())//
 				.createDate(item.getCreateDate())//
 				.updateDate(item.getUpdateDate()).build();
 

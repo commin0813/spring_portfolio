@@ -1,14 +1,29 @@
 package org.commin.blog.api.controller;
 
+import java.util.List;
+
 import org.commin.blog.api.dto.Skill;
+import org.commin.blog.api.dto.enumclass.SkillType;
+import org.commin.blog.api.dto.network.Header;
 import org.commin.blog.api.dto.network.request.RequestSkill;
 import org.commin.blog.api.dto.network.response.ResponseSkill;
+import org.commin.blog.api.service.SkillService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/skill")
 public class SkillController extends CrudController<RequestSkill, ResponseSkill, Skill> {
+
+	@Autowired
+	private SkillService skillService;
+	
+	@GetMapping("list/option")
+	public Header<List<ResponseSkill>> list(SkillType skillType) {
+		return skillService.list(skillType);
+	}
 
 //	@Autowired(required = false)
 //	private BaseService<RequestSkill, ResponseSkill, Skill> baseService;

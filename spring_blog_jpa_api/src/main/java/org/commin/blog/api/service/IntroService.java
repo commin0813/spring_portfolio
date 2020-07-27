@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 public class IntroService extends BaseService<RequestIntro, ResponseIntro, Intro> {
 
 	@Override
+	@Transactional
 	public Header<ResponseIntro> create(Header<RequestIntro> request) {
 		return Optional.ofNullable(request.getData()).map(body -> {
 			Intro intro = Intro.builder()//

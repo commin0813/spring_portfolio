@@ -1,0 +1,354 @@
+/**
+FONT
+**/
+.container .my-font-b1 {
+	font-size: 50px;
+	font-weight: 700;
+	text-align: center;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/** INTRO HEAD CSS **/
+div#headbox {
+	width: 100%;
+	height: 430px;
+	background-image: url('/image/title.jpg');
+	background-size: 100% 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
+	position: relative;
+}
+
+.top-head {
+	height: 100%;
+	text-align: center;
+	color: white;
+	/* background-image: url("../img/cap/background.jpg"); */
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
+}
+
+.intro-box {
+	width: 100%;
+	height: 100%;
+	padding-top: 10%;
+	margin-top: 60px;
+}
+
+.intro-box .intro-text-title {
+	font-size: 22px;
+	font-style: italic;
+	line-height: 50px;
+	text-align: center;
+	margin-bottom: 25px;
+	word-break: nowrap;
+	font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		'Noto Color Emoji';
+}
+
+.intro-box .intro-text-desc {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 5px;
+	text-align: center;
+	margin-bottom: 25px;
+	word-break: nowrap;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@media ( min-width : 900px) {
+	div#headbox {
+		width: 100%;
+		height: 630px;
+		background-image: url('/image/title.jpg');
+		background-size: 100% 100%;
+	}
+	.wrapper {
+		width: 100%;
+		height: 100%;
+		padding-top: 170px;
+		position: relative;
+	}
+	.intro-box {
+		width: 100%;
+		height: 100%;
+		padding: 10%;
+		margin-top: 100px;
+	}
+	.intro-box .intro-text-title {
+		font-size: 42px;
+		font-style: italic;
+		line-height: 22px;
+		text-align: center;
+		margin-bottom: 25px;
+		word-break: nowrap;
+		font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont,
+			'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+			'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+			'Noto Color Emoji';
+	}
+	.intro-box .intro-text-desc {
+		font-size: 55px;
+		font-weight: 700;
+		line-height: 50px;
+		text-align: center;
+		margin-bottom: 25px;
+		word-break: nowrap;
+		font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+			Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+			'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	}
+}
+
+/**** 상단 *****/
+/* header {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+} */
+#topNav {
+	position: fixed;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+	/* height: 70px; */
+	transition: .5s ease-in-out;
+}
+
+#topNav.fixed {
+	position: fixed;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #343A40
+}
+
+.imgbox {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+
+#profile {
+	width: 150px;
+	transition: .5s ease-in-out;
+}
+
+#profile.fixed {
+	width: 120px;
+}
+
+/**
+INTRO
+**/
+#intro {
+	width: 100%;
+
+}
+
+#intro .box {
+	width: 100%;
+	height: 100%;
+}
+
+#intro .box .card-top {
+	width: 100%;
+	height: 30%;
+	border: 0;
+	outline: 0;
+}
+
+#intro .box .card-bottom {
+	width: 100%;
+	height: 70%;
+	border: 0;
+	outline: 0;
+}
+
+#intro .box .card-top .image-box {
+	width: 300px;
+	height: 300px;
+	border-radius: 70%;
+	overflow: hidden;
+	margin: 60px auto;
+}
+
+#intro .box .card-top .image-box .card-img-top {
+	height: 100%;
+	width: 100%;
+}
+
+#intro .box .card-bottom .card-body {
+	margin-top: 40px;
+	text-align: center;
+}
+
+@media ( min-width : 868px) {
+	#intro {
+		width: 100%;
+		height: 850px;
+	}
+	#intro .box {
+		width: 100%;
+		height: 100%;
+	}
+	#intro .box .card-top {
+		width: 50%;
+		height: 100%;
+		padding: 20px;
+		float: left;
+		border: 0;
+		outline: 0;
+	}
+	#intro .box .card-bottom {
+		width: 50%;
+		height: 100%;
+		padding: 20px;
+		float: left;
+		border: 0;
+		outline: 0;
+	}
+	#intro .box .card-top .image-box {
+		width: 400px;
+		height: 400px;
+		border-radius: 70%;
+		overflow: hidden;
+		margin: 110px auto;
+	}
+	#intro .box .card-top .image-box .card-img-top {
+		height: 100%;
+		width: 100%;
+	}
+	#intro .box .card-bottom .card-body {
+		margin-top: 40px;
+		text-align: left;
+	}
+}
+
+@media ( min-width : 992px) {
+	#intro {
+		width: 100%;
+		height: 700px;
+	}
+	#intro .box {
+		width: 100%;
+		height: 100%;
+	}
+	#intro .box .card-top {
+		width: 50%;
+		height: 100%;
+		padding: 20px;
+		float: left;
+		border: 0;
+		outline: 0;
+	}
+	#intro .box .card-bottom {
+		width: 50%;
+		height: 100%;
+		padding: 20px;
+		float: left;
+		border: 0;
+		outline: 0;
+	}
+	#intro .box .card-top .image-box {
+		width: 450px;
+		height: 450px;
+		border-radius: 70%;
+		overflow: hidden;
+		margin: 100px auto;
+	}
+	#intro .box .card-top .image-box .card-img-top {
+		height: 100%;
+		width: 100%;
+	}
+	#intro .box .card-bottom .card-body {
+		margin-top: 40px;
+		text-align: left;
+	}
+}
+
+@media ( min-width : 1200px) {
+	#intro {
+		width: 100%;
+		height: 700px;
+	}
+	#intro .box {
+		width: 100%;
+		height: 100%;
+	}
+	#intro .box .card-top {
+		width: 50%;
+		height: 100%;
+		padding: 20px;
+		float: left;
+		border: 0;
+		outline: 0;
+	}
+	#intro .box .card-bottom {
+		width: 50%;
+		height: 100%;
+		padding: 20px;
+		float: left;
+		border: 0;
+		outline: 0;
+	}
+	#intro .box .card-top .image-box {
+		width: 500px;
+		height: 500px;
+		border-radius: 70%;
+		overflow: hidden;
+		margin: 50px auto;
+	}
+	#intro .box .card-top .image-box .card-img-top {
+		height: 100%;
+		width: 100%;
+	}
+	#intro .box .card-bottom .card-body {
+		margin-top: 40px;
+		text-align: left;
+	}
+}
+
+/**
+PROJECT
+**/
+#project {
+	color: black;
+}
+
+/**
+SKILL
+**/
+#skill {
+	color: black;
+}
+
+#skill .container .row .col .image-box{
+	width:180px;
+		height: 180px;
+		border-radius: 70%;
+		border:5px solid #e1e1e1;
+		overflow: hidden;
+		margin: 50px auto;
+}
+
+#skill .container .row .col .image-box .p-2{
+	width: 100%;height: 100%;
+}
