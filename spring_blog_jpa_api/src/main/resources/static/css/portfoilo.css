@@ -160,7 +160,6 @@ INTRO
 **/
 #intro {
 	width: 100%;
-
 }
 
 #intro .box {
@@ -331,6 +330,7 @@ PROJECT
 **/
 #project {
 	color: black;
+	margin-bottom: 100px;
 }
 
 /**
@@ -340,15 +340,92 @@ SKILL
 	color: black;
 }
 
-#skill .container .row .col .image-box{
-	width:180px;
-		height: 180px;
-		border-radius: 70%;
-		border:5px solid #e1e1e1;
-		overflow: hidden;
-		margin: 50px auto;
+#skill .container .row .col-sm-4 .image-box {
+	width: 180px;
+	height: 180px;
+	border-radius: 70%;
+	border: 5px solid #e1e1e1;
+	overflow: hidden;
+	margin: 50px auto;
 }
 
-#skill .container .row .col .image-box .p-2{
-	width: 100%;height: 100%;
+#skill .container .row .col-sm-4 .image-box .p-2 {
+	width: 100%;
+	height: 100%;
+}
+
+#skill .container .row .col-sm-3 .image-box {
+	width: 180px;
+	height: 180px;
+	border-radius: 70%;
+	border: 5px solid #e1e1e1;
+	overflow: hidden;
+	margin: 50px auto;
+}
+
+#skill .container .row .col-sm-3 .image-box .p-2 {
+	width: 100%;
+	height: 100%;
+}
+
+@media ( min-width : 576px) {
+	#skill .container .row .col-sm-4 .image-box {
+		width: 140px;
+		height: 140px;
+		border-radius: 70%;
+		border: 5px solid #e1e1e1;
+		overflow: hidden;
+		margin: 50px auto;
+	}
+	#skill .container .row .col-sm-4 .image-box .p-2 {
+		width: 100%;
+		height: 100%;
+	}
+	#skill .container .row .col-sm-3 .image-box {
+		width: 140px;
+		height: 140px;
+		border-radius: 70%;
+		border: 5px solid #e1e1e1;
+		overflow: hidden;
+		margin: 50px auto;
+	}
+	#skill .container .row .col-sm-3 .image-box .p-2 {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media ( min-width : 768px) {
+	#skill .container .row .col-sm-4 .image-box {
+		width: 180px;
+		height: 180px;
+		border-radius: 70%;
+		border: 5px solid #e1e1e1;
+		overflow: hidden;
+		margin: 50px auto;
+	}
+	#skill .container .row .col-sm-4 .image-box .p-2 {
+		width: 100%;
+		height: 100%;
+	}
+	#skill .container .row .col-sm-3 .image-box {
+		width: 180px;
+		height: 180px;
+		border-radius: 70%;
+		border: 5px solid #e1e1e1;
+		overflow: hidden;
+		margin: 50px auto;
+	}
+	#skill .container .row .col-sm-3 .image-box .p-2 {
+		width: 100%;
+		height: 100%;
+	}
+	
+}
+
+
+
+
+#contact{
+	 margin-top:100px; 
 }

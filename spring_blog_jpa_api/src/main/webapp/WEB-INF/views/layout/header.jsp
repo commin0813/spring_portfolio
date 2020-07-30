@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link href="css/portfoilo.css" rel="stylesheet" type="text/css">
 <link href="css/timeline.min.css" rel="stylesheet" type="text/css">
@@ -28,6 +29,7 @@
 					<li class="nav-item"><a class="menu nav-link" id="a-intro" href="#intro" style="color: white; font-weight: bold">인트로</a></li>
 					<li class="nav-item"><a class="menu nav-link" id="a-project" href="#project" style="color: white; font-weight: bold">프로젝트</a></li>
 					<li class="nav-item"><a class="menu nav-link" id="a-skill" href="#skill" style="color: white; font-weight: bold">기술스택</a></li>
+					<li class="nav-item"><a class="menu nav-link" id="a-contact" href="#contact" style="color: white; font-weight: bold">CONTACT</a></li>
 				</ul>
 			</div>
 		</div>

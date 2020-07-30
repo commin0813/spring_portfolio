@@ -7,17 +7,13 @@ server:
       enabled: true
       force: true
 spring:
+  profiles:
+    active: dev 
   mvc:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-      
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/portfolio?serverTimezone=Asia/Seoul
-    username: root
-    password: khm0813
-    
+
   jpa:
     open-in-view: true
     hibernate:
@@ -25,7 +21,9 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 #        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        
       use-new-id-generator-mappings: false
+
     show-sql: true
     properties:
       hibernate.format_sql: true
@@ -33,3 +31,19 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+---
+spring:
+  profiles: real
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/portfolio?serverTimezone=Asia/Seoul
+    username: webserver
+    password: khm0813@
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/portfolio?serverTimezone=Asia/Seoul
+    username: root
+    password: khm0813

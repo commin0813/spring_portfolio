@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<hr>
 <script src="/js/timeline.min.js"></script>
 <script>
 	timeline(document.querySelectorAll('.timeline'), {
@@ -27,10 +26,10 @@
 	})();
 </script>
 <script src="/js/animation.js"></script>
-<div class="jumbotron text-center" style="margin-bottom: 0">
+<section class="jumbotron text-center" id="contact" style="margin-bottom: 0">
 	<p>Created by Commin</p>
 	<p>010-1234-1234</p>
 	<p>인천시</p>
-</div>
+</section>
 </body>
 </html>
