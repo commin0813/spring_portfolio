@@ -33,7 +33,7 @@ public class Project {
 	private String startDateString;
 	@Column(nullable = false, length = 8)
 	private String endDateString;
-	@Column(nullable = false, length = 20)
+	@Column(nullable = false, length = 150)
 	private String projectName;
 	@Column(nullable = false, length = 200)
 	private String projectDesc;

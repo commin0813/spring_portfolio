@@ -14,6 +14,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/timelinejs/3.6.6/js/timeline-min.js"></script> -->
 <title>프로그래머 김형민</title>
+<script>
+	window.addEventListener(
+			'DOMContentLoaded',
+			function() {
+				var value = document.cookie.match('(^|;) ?' + 'popupYN'
+						+ '=([^;]*)(;|$)');
+				value = value ? value[2] : null
+				if (value == null || value == 'Y') {
+					window.open("/popup.html", "null",
+							"width=320, height=400, left=200, top=100,location=no,toolbar=no,menubar=no,scrollbars=yes,resizable=yes");
+				}
+			})
+</script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm navbar-dark fixed-top" id="topNav">

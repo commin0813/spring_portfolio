@@ -34,7 +34,7 @@
 								<div class="timeline__item">
 									<div class="timeline__content">
 										<h2>${data.startDateString}-${data.endDateString}</h2>
-										<p>${data.projectName}-${data.projectDesc}</p>
+										<p><h5>${data.projectName}</h5><br/>${data.projectDesc}</p>
 									</div>
 								</div>
 							</c:forEach>

@@ -5,7 +5,7 @@
 		forceVerticalMode : 700,
 		mode : 'horizontal',
 		verticalStartPosition : 'left',
-		visibleItems : 4
+		visibleItems : 5
 	});
 </script>
 <script type="text/javascript">
@@ -25,11 +25,19 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+
+
 <script src="/js/animation.js"></script>
 <section class="jumbotron text-center" id="contact" style="margin-bottom: 0">
-	<p>Created by Commin</p>
-	<p>010-1234-1234</p>
-	<p>인천시</p>
+	<p>
+		<b>phone:</b> 010-6556-2717
+	</p>
+	<p>
+		<b>email:</b> commin0813@gmail.com
+	</p>
+	<p>
+		<b>Created by 김형민</b>
+	</p>
 </section>
 </body>
 </html>

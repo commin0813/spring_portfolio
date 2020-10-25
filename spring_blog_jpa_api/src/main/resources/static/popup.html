@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>방문해주셔서 감사합니다.</title>
+<script language="JavaScript">
+	function setCookie(name, value, expiredays) {
+		var date = new Date();
+		date.setDate(date.getDate() + expiredays);
+		document.cookie = escape(name) + "=" + escape(value) + "; expires="
+				+ date.toUTCString();
+	}
+
+	function closePopup() {
+		if (document.getElementById("pop-close-btn").value) {
+			setCookie("popupYN", "N", 1);
+			self.close();
+		}
+	}
+</script>
+<script type="text/javascript">
+	$(function() {
+		if ($.cookie('hnnpop') == undefined) {
+			$("#pop-wrap").show();
+		}
+		$("#pop-close-btn").bind("click", function() {
+			if ($("#pop-day").is(":checked")) {
+				$.cookie('hnnpop', '1', {
+					expires : 1,
+					path : '/'
+				});
+			}
+			$("#pop-wrap").slideUp(200);
+			return false;
+		});
+	});
+</script>
+</head>
+<body onresize="parent.resizeTo(360,490)" onload="parent.resizeTo(360,490)">
+	<div id="pop-wrap" style="position:relative; height: 400px">
+		<div id="pop" style="background-image: url('/image/banner.png'); width: 320px ;height: 400px;">
+			<div id="pop-content" ></div>
+			<div id="pop-close" style="color:#fff;text-align:center;background-color:#566e84;width:320px;position:absolute; left:0px; bottom:0px;">
+				<b>하루에 한번만 보기</b><input type="checkbox" id="pop-close-btn" onclick="closePopup();">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

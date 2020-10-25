@@ -36,7 +36,7 @@ spring:
   profiles: real
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/portfolio?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://172.31.34.173:13308/portfolio?serverTimezone=Asia/Seoul
     username: webserver
     password: khm0813@
 ---
